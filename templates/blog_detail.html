@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+
+  h1{
+    color: white;
+  }
+  p{
+    color: white;
+  }
+  .üstrek{
+    width: 800px;
+    height: 200px;
+    background-color: aliceblue;
+  }
+  .hiko{
+    float: left;
+    width: 50%;
+  }
+  .sag-div {
+    float: left;
+    width: 23%;
+    background-color: aliceblue;
+    height: 600px;
+  }
+  .sol-div {
+    float: left;
+    width: 23%;
+    background-color: aliceblue;
+    height: 600px;
+  }
+  </style>
+<center>
+  <br>
+  <div class="üstrek">
+    Reklam
+  </div>
+  <br>
+  <br>
+
+  <div class="sol-div">
+    Reklam
+  </div>
+  <div class="hiko">
+  <h1>{{ blog.baslik }}</h1>
+  <br>
+  <br>
+  <br>
+  <p>Yayınlanma Tarihi  :  {{ blog.tarihi }}</p>
+  <img src="{{ blog.image.url }}" alt="{{ blog.baslik }}" style="max-width: 500px; max-height: 500px;">
+  <p>{{ blog.yazi }}</p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  </div>
+  <div class="sag-div">
+    Reklam
+
+</div>
+</center>
+{% endblock %}

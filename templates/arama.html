@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Arama Sonuçları</h1>
+
+  {% if results %}
+    <ul>
+      {% for haber in results %}
+        <li>
+          <a href="{% url 'blog_detail' haber.url %}">
+            <img src="{{ haber.image.url }}" alt="{{ haber.baslik }}">
+            <h2>{{ haber.baslik }}</h2>
+            <p>{{ haber.yazi }}</p>
+            <p>Kategoriler:
+              {% for kategori in haber.kategoriler.all %}
+                {{ kategori.ad }}{% if not forloop.last %}, {% endif %}
+              {% endfor %}
+            </p>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Aradığınız kriterlere uygun haber bulunamadı.</p>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,23 @@
+<!-- edit_profile.html -->
+
+<h2>Profil Düzenle</h2>
+<form method="POST">
+  {% csrf_token %}
+  <label for="first_name">İsim:</label>
+  <input type="text" id="first_name" name="first_name" value="{{ user.first_name }}"><br>
+  <label for="last_name">Soyisim:</label>
+  <input type="text" id="last_name" name="last_name" value="{{ user.last_name }}"><br>
+  <label for="biography">Biografi:</label>
+  <textarea id="biography" name="biography">{{ user.biography }}</textarea><br>
+  <label for="website">Web Sitesi:</label>
+  <input type="text" id="website" name="website" value="{{ user.website }}"><br>
+  <label for="instagram">İnstagram:</label>
+  <input type="text" id="instagram" name="instagram" value="{{ user.instagram }}"><br>
+  <label for="facebook">Facebook:</label>
+  <input type="text" id="facebook" name="facebook" value="{{ user.facebook }}"><br>
+  <label for="twitter">Twitter:</label>
+  <input type="text" id="twitter" name="twitter" value="{{ user.twitter }}"><br>
+  <label for="youtube">Youtube:</label>
+  <input type="text" id="youtube" name="youtube" value="{{ user.youtube }}"><br>
+  <input type="submit" value="Kaydet">
+</form>

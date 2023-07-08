@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<style>
+*{
+  color:white;
+}
+.container {
+min-height: 100vh;
+background: #86867f75;
+display: flex;
+}
+.container form{
+width: 670px;
+height: 400px;
+display: flex;
+box-shadow: 20px 20px 50px Orgba(0,0,0,0.5);
+border-radius: 15px;
+background: Orgba(255,255,255,0.1);
+backdrop-filter: blur(10px);
+flex-wrap: wrap;
+}
+.container form h1{
+color: #fff;
+font-weight: 500;
+margin-top: 20px;
+width: 500px;
+text-align: center;
+}
+.container form button{
+border: none;
+background: #fff;
+border-radius: 5px;
+margin-top: 20px;
+font-weight: 600;
+font-size: 20px;
+color: #333;
+width: 100px;
+padding: 0;
+margin-right: 500px;
+left: 20%;
+}
+.container form input,textarea {
+width: 290px;
+height: 40px;
+padding-left: 10px;
+outline: none;
+border: none;
+font-size: 15px;
+margin-bottom: 10px;
+background: none;
+border-bottom: 2px solid #fff;
+}
+</style>
+
+
+<center>
+<div class="container">
+  <form method="post">
+    <h1>İletişim Formu</h1>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <br>
+    <button type="submit">Gönder</button>
+  </form>
+</div>
+</center>
+{% endblock %}

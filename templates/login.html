@@ -1,0 +1,52 @@
+{%extends "base.html"%}
+{% block content %}
+<center>
+  <div class="formss">
+<h2>Giriş Yap</h2>
+<form class="frr" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button class="grs" type="submit">Giriş Yap</button>
+  <a href="/register">Hesabınız Yokmu ? Kayıt Ol</a>
+</form>
+</div>
+
+<style>
+  .formss{
+    background-color: #1e1d27;
+    width: 500px;
+    height: 350px;
+  }
+h2{
+  color: white;
+  position: relative;
+  top: 25px;
+}
+.frr{
+  position: relative;
+  top: 50px;
+}
+label{
+  color: white;
+}
+#id_username{
+  color: white;
+  background-color: #5e5d69;
+  position: relative;
+  left: 30px;
+}
+#id_password{
+  color: white;
+  background-color: #5e5d69;
+  position: relative;
+  left: 50px;
+}
+.grs{
+  position: relative;
+  color: #5e5d69;
+  background-color: white;
+  top: 20px;
+}
+</style>
+</center>
+{%endblock%}

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROOT | Anasayfa</title>
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .main {
+      width: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url("https://i.hizliresim.com/ohix7oa.jpg");
+      background-position: center;
+      background-size: cover;
+      height: 109vh;
+    }
+
+    .navbar {
+      width: 1200px;
+      height: 75px;
+      margin: auto;
+    }
+
+    .icon {
+      width: 200px;
+      float: left;
+      height: 70px;
+    }
+
+    .logo {
+      color: #d61f1f;
+      font-size: 35px;
+      font-family: Arial;
+      padding-left: 20px;
+      float: left;
+      padding-top: 10px;
+    }
+
+    .menu {
+      width: 400px;
+      float: left;
+      height: 70px;
+    }
+
+    ul {
+      float: left;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    ul li {
+      list-style: none;
+      margin-left: 62px;
+      margin-top: 27px;
+      font-size: 14px;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-family: Arial;
+      font-weight: bold;
+      transition: 0.4s ease-in-out;
+    }
+
+    ul li a:hover {
+      color: #d61f1f;
+    }
+
+    .search {
+      width: 330px;
+      float: left;
+      margin-left: 270px;
+    }
+
+    .srch {
+      font-family: 'Times New Roman';
+      width: 200px;
+      height: 40px;
+      background: transparent;
+      border: 1px solid #d61f1f;
+      margin-top: 13px;
+      color: #fff;
+      border-right: none;
+      float: left;
+      padding: 10px;
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+    }
+
+    .btn {
+      width: 100px;
+      height: 40px;
+      background: #d61f1f;
+      border: 2px solid #d61f1f;
+      margin-top: 13px;
+      color: #fff;
+      font-size: 15px;
+      border-bottom-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    .btn:focus {
+      outline: none;
+    }
+
+    .srch:focus {
+      outline: none;
+    }
+
+    .content {
+      width: 1200px;
+      height: auto;
+      margin: auto;
+      color: #fff;
+      position: relative;
+    }
+
+    .content .par {
+      padding-left: 20px;
+      padding-bottom: 25px;
+      font-family: Arial;
+      letter-spacing: 1.2px;
+      line-height: 30px;
+    }
+
+    .content h1 {
+      font-family: 'Times New Roman';
+      font-size: 50px;
+      padding-left: 20px;
+      margin-top: 9%;
+      letter-spacing: 2px;
+    }
+
+    .content .cn {
+      width: 160px;
+      height: 40px;
+      background: #d61f1f;
+      border: none;
+      margin-bottom: 10px;
+      margin-left: 20px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: .4s ease;
+    }
+
+    .content .cn a {
+      text-decoration: none;
+      color: #fff;
+      transition: .3s ease;
+    }
+
+    .cn:hover {
+      background-color: #665d5d;
+    }
+
+    .content span {
+      color: #d61f1f;
+      font-size: 60px;
+    }
+
+    .form {
+      width: 250px;
+      height: 380px;
+      background: linear-gradient(to top, rgb(5, 5, 5)50%, rgba(5, 5, 5, 0.8)50%);
+      position: absolute;
+      top: -20px;
+      left: 870px;
+      border-radius: 10px;
+      padding: 25px;
+    }
+
+    .form h2 {
+      width: 220px;
+      font-family: sans-serif;
+      text-align: center;
+      color: #fff;
+      font-size: 22px;
+      background-color: #d61f1f;
+      border-radius: 10px;
+      margin: 2px;
+      padding: 8px;
+    }
+
+    .form input {
+      width: 240px;
+      height: 35px;
+      background: transparent;
+      border-bottom: 1px solid #d61f1f;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      color: #fff;
+      font-size: 15px;
+      letter-spacing: 1px;
+      margin-top: 30px;
+      font-family: sans-serif;
+    }
+
+    .form input:focus {
+      outline: none;
+    }
+
+    ::placeholder {
+      color: #fff;
+      font-family: Arial;
+    }
+
+    .btnn {
+      width: 240px;
+      height: 40px;
+      background: #d61f1f;
+      border: none;
+      margin-top: 30px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      color: #fff;
+      transition: 0.4s ease;
+    }
+
+    .btnn:hover {
+      background: #665d5d;
+      color: #d61f1f;
+    }
+
+    .btnn a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .form .link {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
+      padding-top: 20px;
+      text-align: center;
+    }
+
+    .form .link a {
+      text-decoration: none;
+      color: #d61f1f;
+    }
+
+    .liw {
+      padding-top: 15px;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+
+    .icons a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .icons ion-icon {
+      color: #fff;
+      font-size: 30px;
+      padding-left: 14px;
+      padding-top: 5px;
+      transition: 0.3s ease;
+    }
+
+    .icons ion-icon:hover {
+      color: #d61f1f;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="main">
+    <div class="navbar">
+      <div class="icon">
+        <h2 class="logo">Treangle</h2>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li><a href="base.html">ANASAYFA</a></li>
+          <li><a href="hakkimizda.html">HAKKIMDA</a></li>
+          <li><a href="#">DESTEK</a></li>
+          <li><a href="#">TASARIM</a></li>
+          <li><a href="#">İLETİŞİM</a></li>
+        </ul>
+      </div>
+
+
+      <div class="search">
+        <input class="srch" type="search" name="" placeholder="Ara...">
+        <a href="#"> <button class="btn">Ara</button> </a>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1>BEN <br> <span>Treangle</span> <br> HOŞGELDİNİZ</h1>
+      <p class="par"> <br>
+
+        Treangle, en son teknolojik ürünlerle dolu bir e-ticaret platformudur. <br> En yeni akıllı telefonlardan ileri düzey
+        oyun ekipmanlarına kadar, <br> teknoloji tutkunlarının ihtiyaçlarını karşılamaya odaklanıyoruz.
+
+
+
+      </p>
+
+      <button class="cn"><a href="#">Bize Katılın</a></button>
+
+      <div class="form">
+        <h2>Giriş Yapın</h2>
+        <input type="email" name="email" placeholder="E-Posta Adresinizi Giriniz...">
+        <input type="password" name="" placeholder="Şifre">
+        <button class="btnn"><a href="#">GİRİŞ YAP</a></button>
+
+        <p class="link">🢃 Hesabınız yoksa 🢃<br>
+          <a href="#">Üye Olun</a>
+        </p>
+        <p class="liw">🢃 Diğer giriş seçenekleri 🢃</p>
+
+        <div class="icons">
+          <a href="https://www.facebook.com/login/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="https://www.instagram.com/accounts/login/" target="_blank"><ion-icon
+              name="logo-instagram"></ion-icon></a>
+          <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Flogin%3Flang%3Den-gb"
+            target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+          <a href="https://accounts.google.com/v3/signin/identifier?dsh=S-1627018973%3A1688552895540806&continue=https%3A%2F%2Fmyaccount.google.com%2Flanguage&emr=1&followup=https%3A%2F%2Fmyaccount.google.com%2Flanguage&ifkv=AeDOFXhg7tivAyoiUVWaqziaAfzyFv9nduW2aXHRpDDFo3OgX54Xmk7uHwd-bNliZSfrSFyylJvgNw&mrp=preferences&osid=1&passive=1209600&service=accountsettings&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+            target="_blank"><ion-icon name="logo-google"></ion-icon></a>
+          <a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=14&ct=1688552924&rver=7.1.6819.0&wp=MBI_SSL&wreply=https%3A%2F%2Flw.skype.com%2Flogin%2Foauth%2Fproxy%3Fclient_id%3D572381%26redirect_uri%3Dhttps%253A%252F%252Fweb.skype.com%252FAuth%252FPostHandler%253FopenPstnPage%253Dtrue%26state%3D301bc61c-8586-4f65-b716-5d40480ee8f5&lc=1033&id=293290&mkt=en-US&psi=skype&lw=1&cobrandid=2befc4b5-19e3-46e8-8347-77317a16a5a5&client_flight=ReservedFlight33%2CReservedFlight67"
+            target="_blank"><ion-icon name="logo-skype"></ion-icon></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</body>
+
+</html>

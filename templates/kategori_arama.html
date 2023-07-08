@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kategori Arama</title>
+</head>
+<body>
+    <h1>Kategori Arama</h1>
+    <form method="GET" action="{% url 'kategori_arama' %}">
+        <input type="text" name="q" placeholder="Kategori ara" value="{{ query }}">
+        <button type="submit">Ara</button>
+    </form>
+    <ul>
+        {% if kategoriler %}
+            {% for kategori in kategoriler %}
+                <li>{{ kategori.name }}</li>
+            {% endfor %}
+        {% else %}
+            <p>Arama sonucu bulunamadı.</p>
+        {% endif %}
+    </ul>
+</body>
+</html>

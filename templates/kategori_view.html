@@ -1,0 +1,44 @@
+<!-- kategori_view.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>{{ kategori.ad }}</h1>
+<style>
+
+.hades{
+  overflow: hidden;
+        position: relative;
+        background-color: #fff6fe;
+        margin-bottom: 20px;
+        height: 350px;
+        width: 25%;
+        display: inline-block;
+        padding: 2px;
+        margin-right: 10px;
+
+
+}
+img{
+  max-width: 400px;
+        max-height: 200px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+}
+</style>
+    {% for gonderi in kategori.gonderiler.all %}
+    <center>
+      <div class="hades" onclick="window.location.href='/Haberler/{{ gonderi.url|slugify }}/' ; return false;">
+        <img class="tre" src="{{ gonderi.image.url }}" alt="{{ gonderi.baslik }}">
+    <br>
+        <h2>{{ gonderi.baslik}}</h2>
+    <br>
+      </div>
+      <br>
+      </center>
+    {% endfor %}
+    <br>
+    <br>
+{% endblock %}
